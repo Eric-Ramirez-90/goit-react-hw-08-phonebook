@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from '../../redux/operation';
+import { fetchContacts } from '../../redux/contacts/operation';
 // Libraries
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // Components
 import ContactForm from '../ContactForm';
 import Filter from '../Filter';
 import ContactList from '../ContactList';
-import Layout from 'components/Layout/Layout';
+import { SharedLayout } from '../SharedLayout';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,12 +17,11 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Layout>
+    <SharedLayout>
       <ContactForm />
       <Filter />
       <ContactList />
-      <ToastContainer autoClose={3000} rtl position="top-center" />
-    </Layout>
+    </SharedLayout>
   );
 }
 

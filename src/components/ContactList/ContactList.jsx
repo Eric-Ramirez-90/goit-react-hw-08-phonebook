@@ -4,7 +4,7 @@ import {
   selectIsLoading,
   selectError,
   selectVisibleContacts,
-} from 'redux/selectors';
+} from 'redux/contacts/selectors';
 import Notification from '../Notification';
 import ContactItem from '../ContactItem';
 import { Container, Item, List } from './ContactList.styled';
