@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/contacts/operation';
+import { deleteContact } from 'redux/contacts/operations';
 import { selectIsLoading } from 'redux/contacts/selectors';
 import { ThreeCircles } from 'react-loader-spinner';
 import PropTypes from 'prop-types';
