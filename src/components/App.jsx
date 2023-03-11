@@ -1,22 +1,17 @@
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-// import { fetchContacts } from '../../redux/contacts/operation';
-// Libraries
 import 'react-toastify/dist/ReactToastify.css';
 // Components
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
-// import ContactForm from './ContactForm';
-// import Filter from './Filter';
-// import ContactList from './ContactList';
 import { SharedLayout } from './SharedLayout';
 
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
-const TasksPage = lazy(() => import('../pages/Contacts'));
+const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 function App() {
   const dispatch = useDispatch();
@@ -47,9 +42,9 @@ function App() {
           }
         />
         <Route
-          path="/tasks"
+          path="/contacts"
           element={
-            <PrivateRoute redirectTo="/login" component={<TasksPage />} />
+            <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
           }
         />
       </Route>

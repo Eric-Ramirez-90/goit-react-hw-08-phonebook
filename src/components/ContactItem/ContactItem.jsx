@@ -29,7 +29,6 @@ function ContactItem({ contact: { id, name, number } }) {
 
 ContactItem.propTypes = {
   contact: PropTypes.exact({
-    createdAt: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
