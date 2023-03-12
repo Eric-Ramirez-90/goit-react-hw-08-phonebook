@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   width: 400px;
   padding: 15px;
 
-  background-color: rgb(2, 187, 2, 0.2);
+  background-color: rgb(81, 129, 234, 0.7);
   border-radius: 10px;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
@@ -41,7 +41,7 @@ export const Input = styled(Field)`
     color: #808080;
   }
   :focus {
-    outline: 3px solid #475ce69e;
+    outline: 3px solid rgb(81, 129, 234);
 
     ::placeholder {
       color: #ffffff;

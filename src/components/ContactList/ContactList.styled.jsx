@@ -27,6 +27,6 @@ export const Item = styled.li`
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
 
   :hover {
-    background-color: rgb(2, 187, 2, 0.2);
+    background-color: rgb(81, 129, 234, 0.2);
   }
 `;

@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 500px;
   padding: 15px;
 
-  border-bottom: 5px dashed rgb(2, 187, 2, 0.3);
+  border-bottom: 5px dashed rgb(81, 129, 234);
 `;
 
 export const Title = styled.h2`
@@ -40,10 +40,10 @@ export const Input = styled.input`
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
   :focus {
-    outline: 3px solid #475ce69e;
+    outline: 3px solid rgb(81, 129, 234);
   }
 `;
 
 export const SubTitle = styled.h3`
-  color: #475ce6;
+  color: rgb(81, 129, 234);
 `;

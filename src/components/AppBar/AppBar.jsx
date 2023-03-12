@@ -2,15 +2,23 @@ import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import { useAuth } from 'hooks';
-import { Header } from './AppBar.styled';
+import { StyledAppBar, StyledToolbar } from './AppBar.styled';
 
-export const AppBar = () => {
+export const RespAppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Header>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-    </Header>
+    <StyledAppBar>
+      <StyledToolbar
+        sx={{
+          '@media only screen and (max-width: 600px)': {
+            justifyContent: 'space-around',
+          },
+        }}
+      >
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </StyledToolbar>
+    </StyledAppBar>
   );
 };

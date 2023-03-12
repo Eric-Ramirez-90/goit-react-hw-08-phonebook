@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
-import { AppBar } from './AppBar/AppBar';
+import { RespAppBar } from './AppBar/AppBar';
 
 export const SharedLayout = () => {
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
-      <AppBar />
+      <RespAppBar />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

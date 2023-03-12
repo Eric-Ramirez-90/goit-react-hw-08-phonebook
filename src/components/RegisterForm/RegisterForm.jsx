@@ -1,6 +1,19 @@
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
-import { Form, Label } from './RegisterForm.styled';
+import {
+  Container,
+  StyledLockIcon,
+  StyledTypography,
+  Form,
+  StyledTextField,
+  StyledBox,
+  StyledButton,
+  StyledInputBox,
+} from './RegisterForm.styled';
+
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import KeyIcon from '@mui/icons-material/Key';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -20,20 +33,51 @@ export const RegisterForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Username
-        <input type="text" name="name" />
-      </Label>
-      <Label>
-        Email
-        <input type="email" name="email" />
-      </Label>
-      <Label>
-        Password
-        <input type="password" name="password" />
-      </Label>
-      <button type="submit">Register</button>
-    </Form>
+    <Container>
+      <StyledLockIcon />
+      <StyledTypography variant="h3" component="h1">
+        Register
+      </StyledTypography>
+      <StyledBox>
+        <Form onSubmit={handleSubmit} autoComplete="off">
+          <StyledInputBox>
+            <AccountCircle sx={{ color: 'white', mr: 1, my: 0.5 }} />
+            <StyledTextField
+              type="text"
+              name="name"
+              id="name"
+              label="Username"
+              variant="standard"
+            />
+          </StyledInputBox>
+
+          <StyledInputBox>
+            <AlternateEmailIcon sx={{ color: 'white', mr: 1, my: 0.5 }} />
+            <StyledTextField
+              type="email"
+              name="email"
+              id="email"
+              label="Email"
+              variant="standard"
+            />
+          </StyledInputBox>
+
+          <StyledInputBox>
+            <KeyIcon sx={{ color: 'white', mr: 1, my: 0.5 }} />
+            <StyledTextField
+              type="password"
+              name="password"
+              id="password"
+              label="Password"
+              variant="standard"
+            />
+          </StyledInputBox>
+
+          <StyledButton type="submit" variant="outlined">
+            Register
+          </StyledButton>
+        </Form>
+      </StyledBox>
+    </Container>
   );
 };

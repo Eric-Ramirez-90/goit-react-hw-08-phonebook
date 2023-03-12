@@ -3,12 +3,11 @@ import styled from '@emotion/styled';
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
-  gap: 26px;
-  max-width: 600px;
+  gap: 12px;
+  max-width: 960px;
+  height: 825px;
   margin: 0 auto;
-  padding: 16px;
-
-  background-color: rgb(128, 128, 128, 0.9);
+  padding: 12px;
 
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,

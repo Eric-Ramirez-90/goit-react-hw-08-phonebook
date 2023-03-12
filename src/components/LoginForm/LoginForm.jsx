@@ -1,6 +1,18 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
-import { Form, Label } from './LoginForm.styled';
+import {
+  Form,
+  Container,
+  StyledLockIcon,
+  StyledTypography,
+  StyledTextField,
+  StyledBox,
+  StyledButton,
+  StyledInputBox,
+} from './LoginForm.styled';
+
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import KeyIcon from '@mui/icons-material/Key';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -18,16 +30,40 @@ export const LoginForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Email
-        <input type="email" name="email" />
-      </Label>
-      <Label>
-        Password
-        <input type="password" name="password" />
-      </Label>
-      <button type="submit">Log In</button>
-    </Form>
+    <Container>
+      <StyledLockIcon />
+      <StyledTypography variant="h3" component="h1">
+        Log In
+      </StyledTypography>
+      <StyledBox>
+        <Form onSubmit={handleSubmit} autoComplete="off">
+          <StyledInputBox>
+            <AlternateEmailIcon sx={{ color: 'white', mr: 1, my: 0.5 }} />
+            <StyledTextField
+              type="email"
+              name="email"
+              id="email"
+              label="Email"
+              variant="standard"
+            />
+          </StyledInputBox>
+
+          <StyledInputBox>
+            <KeyIcon sx={{ color: 'white', mr: 1, my: 0.5 }} />
+            <StyledTextField
+              type="password"
+              name="password"
+              id="password"
+              label="Password"
+              variant="standard"
+            />
+          </StyledInputBox>
+
+          <StyledButton type="submit" variant="outlined">
+            Log In
+          </StyledButton>
+        </Form>
+      </StyledBox>
+    </Container>
   );
 };
