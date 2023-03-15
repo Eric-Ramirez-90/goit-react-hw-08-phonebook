@@ -40,7 +40,7 @@ const initialValues = {
   number: '',
 };
 
-function ContactForm() {
+const ContactForm = () => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
@@ -102,6 +102,6 @@ function ContactForm() {
       </Formik>
     </div>
   );
-}
+};
 
 export default ContactForm;

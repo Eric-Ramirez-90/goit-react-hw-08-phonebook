@@ -2,7 +2,7 @@ import { useAuth } from 'hooks/useAuth';
 import { NavLink } from 'react-router-dom';
 import { Container, StyledTypography, StyledLink } from './HomePage.styled';
 
-export default function Home() {
+function Home() {
   const { isLoggedIn } = useAuth();
 
   return isLoggedIn ? (
@@ -33,3 +33,5 @@ export default function Home() {
     </Container>
   );
 }
+
+export default Home;

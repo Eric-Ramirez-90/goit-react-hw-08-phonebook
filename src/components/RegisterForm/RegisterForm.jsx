@@ -15,7 +15,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import KeyIcon from '@mui/icons-material/Key';
 
-export const RegisterForm = () => {
+const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -81,3 +81,5 @@ export const RegisterForm = () => {
     </Container>
   );
 };
+
+export default RegisterForm;

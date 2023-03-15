@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
-import { RespAppBar } from './AppBar/AppBar';
+import 'react-toastify/dist/ReactToastify.css';
+import AppBar from './AppBar';
 
-export const SharedLayout = () => {
+const SharedLayout = () => {
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
-      <RespAppBar />
+      <AppBar />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
@@ -14,3 +15,5 @@ export const SharedLayout = () => {
     </div>
   );
 };
+
+export default SharedLayout;

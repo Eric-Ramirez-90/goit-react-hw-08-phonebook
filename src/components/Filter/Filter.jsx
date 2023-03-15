@@ -10,7 +10,7 @@ import {
   Wrapper,
 } from './Filter.styled';
 
-function Filter() {
+const Filter = () => {
   const filter = useSelector(selectFilter) || '';
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
@@ -42,6 +42,6 @@ function Filter() {
       </Wrapper>
     </Container>
   );
-}
+};
 
 export default Filter;

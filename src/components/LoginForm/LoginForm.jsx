@@ -14,7 +14,7 @@ import {
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import KeyIcon from '@mui/icons-material/Key';
 
-export const LoginForm = () => {
+const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -67,3 +67,5 @@ export const LoginForm = () => {
     </Container>
   );
 };
+
+export default LoginForm;

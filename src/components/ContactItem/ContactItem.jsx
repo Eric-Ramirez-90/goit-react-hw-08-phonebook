@@ -5,7 +5,7 @@ import { ThreeCircles } from 'react-loader-spinner';
 import PropTypes from 'prop-types';
 import { Button, DataConteiner, Text } from './ContactItem.styled';
 
-function ContactItem({ contact: { id, name, number } }) {
+const ContactItem = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
   const onDelete = () => dispatch(deleteContact(id));
   const isLoading = useSelector(selectIsLoading);
@@ -25,7 +25,7 @@ function ContactItem({ contact: { id, name, number } }) {
       </Button>
     </>
   );
-}
+};
 
 ContactItem.propTypes = {
   contact: PropTypes.exact({

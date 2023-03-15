@@ -10,7 +10,7 @@ import ContactItem from '../ContactItem';
 import { Container, Item, List } from './ContactList.styled';
 import Loader from 'components/Loader/Loader';
 
-function ContactList() {
+const ContactList = () => {
   const filtredContact = useSelector(selectVisibleContacts) || '';
   const contacts = useSelector(selectContacts);
   const isLoading = useSelector(selectIsLoading);
@@ -36,6 +36,6 @@ function ContactList() {
       )}
     </>
   );
-}
+};
 
 export default ContactList;
