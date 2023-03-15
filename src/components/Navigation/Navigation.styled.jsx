@@ -7,7 +7,11 @@ export const Link = styled(NavLink)`
   padding: 12px;
   font-weight: 700;
   font-size: 20px;
-  color: #2a363b;
+  color: white;
+
+  :hover {
+    text-decoration: underline;
+  }
 
   &.active {
     color: rgb(255, 0, 0);

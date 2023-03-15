@@ -10,6 +10,7 @@ import { useAuth } from 'hooks';
 import { SharedLayout } from './SharedLayout';
 import Loader from './Loader/Loader';
 
+const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
@@ -27,6 +28,7 @@ function App() {
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
+        <Route index element={<HomePage />} />
         <Route
           path="/register"
           element={

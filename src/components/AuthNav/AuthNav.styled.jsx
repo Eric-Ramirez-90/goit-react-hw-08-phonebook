@@ -9,6 +9,10 @@ export const Link = styled(NavLink)`
   color: white;
   font-size: 20px;
 
+  :hover {
+    text-decoration: underline;
+  }
+
   &.active {
     color: rgb(255, 0, 0);
   }
