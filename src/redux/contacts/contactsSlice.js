@@ -21,6 +21,7 @@ const contactsSlice = createSlice({
         state.items.unshift(payload);
       })
       .addCase(deleteContact.fulfilled, (state, { payload }) => {
+        console.log(payload);
         state.items = state.items.filter(contact => contact.id !== payload.id);
       })
       .addMatcher(isAnyOf(...getActions('pending')), state => {
